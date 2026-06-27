@@ -9,7 +9,7 @@
 
 )
 
-> **B.Sc. Final Year Project** — A road sign detection system for autonomous vehicles using a CNN ensemble fused via an Ordered Weighted Averaging (OWA) layer, evaluated in a Unity 3D traffic simulation across multiple weather and accident scenarios.
+> **A road sign detection system for autonomous vehicles using a CNN ensemble fused via an Ordered Weighted Averaging (OWA) layer, evaluated (not in real time) in a Unity 3D traffic simulation across multiple weather and accident scenarios.
 
 ---
 
