@@ -58,8 +58,8 @@ Intelligent Transportation Systems (ITS) aim to enhance road safety and Internet
           └────────────────────────────────────────────────────┘
                                 │
                     ┌───────────▼───────────┐
-                    │   Vehicle Decision     │
-                    │  (Speed, Manoeuvre)    │
+                    │   Vehicle Decision    │
+                    │  (Speed, Manoeuvre)   │
                     └───────────────────────┘
 ```
 
