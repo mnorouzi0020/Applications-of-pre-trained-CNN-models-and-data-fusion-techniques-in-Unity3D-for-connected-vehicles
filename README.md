@@ -1,5 +1,5 @@
-# Road Sign Detection for Intelligent Transportation Systems
-### CNN Ensemble with OWA Fusion in a Unity 3D Simulated Environment
+# Applications of pre-trained CNN models and data fusion techniques in Unity3D for connected vehicles
+
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?logo=tensorflow)](https://www.tensorflow.org/)
