@@ -5,7 +5,9 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?logo=tensorflow)](https://www.tensorflow.org/)
 [![Unity](https://img.shields.io/badge/Unity-3D-black?logo=unity)](https://unity.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](YOUR_ARXIV_LINK_HERE)
+[![Paper](Springer Nature)](https://doi.org/10.1007/s10489-024-06213-3
+
+)
 
 > **B.Sc. Final Year Project** — A road sign detection system for autonomous vehicles using a CNN ensemble fused via an Ordered Weighted Averaging (OWA) layer, evaluated in a Unity 3D traffic simulation across multiple weather and accident scenarios.
 
@@ -158,7 +160,7 @@ The Python–Unity communication uses a **full-duplex TCP socket**, allowing Uni
 
 1. Upload the `Combined_Dataset (Unity_Kaggle)` folder to your Google Drive.
 
-2. Open `Paper_FinalVersion2.py` in Colab and mount your Drive:
+2. Open `main.py` in Colab and mount your Drive:
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
@@ -171,7 +173,7 @@ drive.mount('/content/drive')
 "/content/drive/MyDrive/Combined_Dataset (Unity_Kaggle)/Train"
 ```
 
-4. Run all cells sequentially. The three models train first, then the OWA ensemble is trained on top.
+4. Run all cells sequentially. The three models are trained first, then the OWA ensemble is trained on top.
 
 ### Running Locally
 
@@ -211,12 +213,15 @@ python Paper_FinalVersion2.py
 If you use this code in your research, please cite:
 
 ```bibtex
-@article{YOURNAME2024its,
-  title   = {Road Sign Detection for Intelligent Transportation Systems using CNN Ensemble and OWA Data Fusion in a Unity 3D Environment},
-  author  = {YOUR NAME and CO-AUTHORS},
-  journal = {YOUR JOURNAL / CONFERENCE},
-  year    = {2024},
-  url     = {YOUR_ARXIV_OR_DOI_LINK}
+@article{norouzi2025applications,
+  title={Applications of pre-trained CNN models and data fusion techniques in Unity3D for connected vehicles: M. Norouzi et al.},
+  author={Norouzi, Mojtaba and Hosseini, Seyed Hossein and Khoshnevisan, Mohammad and Moshiri, Behzad},
+  journal={Applied Intelligence},
+  volume={55},
+  number={6},
+  pages={390},
+  year={2025},
+  publisher={Springer}
 }
 ```
 
@@ -230,10 +235,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Contact
 
-**Your Name**  
-📧 your.email@institution.edu  
-🔗 [LinkedIn](https://linkedin.com/in/yourprofile) | [Google Scholar](https://scholar.google.com/citations?user=YOURID)
+**Mojtaba Norouzi**  
+📧 mojtaba_norouzi77@alumni.iust.ac.ir
+🔗 [LinkedIn](www.linkedin.com/in/mojtaba-norouzi-2522a0206)
 
----
-
-*B.Sc. Final Year Project — Department of [YOUR DEPARTMENT], [YOUR UNIVERSITY], [YEAR]*
