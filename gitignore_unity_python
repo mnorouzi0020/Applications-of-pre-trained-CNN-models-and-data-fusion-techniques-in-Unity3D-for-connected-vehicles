@@ -1,0 +1,128 @@
+# ============================================================
+#  UNITY
+# ============================================================
+
+# Auto-generated folders (the large ones — never commit these)
+Library/
+Temp/
+Logs/
+obj/
+Build/
+Builds/
+UserSettings/
+
+# Unity-generated project files
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+*.unityproj
+
+# Unity cache & metadata
+*.meta~
+[Ll]og/
+
+# Unity asset store packages (re-downloadable)
+Assets/AssetStoreTools*
+
+# Crashlytics
+Assets/Plugins/Editor/FabricCore.dll
+Assets/Plugins/Editor/FabricCore.dll.meta
+Assets/Standard Assets/
+
+# ============================================================
+#  PYTHON / ML
+# ============================================================
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.env/
+.venv/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# TensorFlow / Keras saved models
+*.h5
+*.keras
+*.pb
+*.ckpt
+*.index
+*.data-*
+checkpoint
+saved_models/
+
+# TensorBoard logs
+logs/
+runs/
+tb_logs/
+
+# Data files (large — host elsewhere)
+*.npy
+*.npz
+*.pkl
+*.hdf5
+*.zip
+*.tar
+*.tar.gz
+
+# Dataset folder (2 GB+ — too large for GitHub)
+Combined_Dataset (Unity_Kaggle)/
+
+# ============================================================
+#  RESULTS / OUTPUTS
+# ============================================================
+results/*
+!results/.gitkeep
+*.png
+*.jpg
+*.jpeg
+*.svg
+
+# ============================================================
+#  OS & IDE
+# ============================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+
+# JetBrains / Rider
+.idea/
+*.swp
+*.swo
+
+# Visual Studio
+*.suo
+*.user
+.vs/
