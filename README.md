@@ -5,9 +5,6 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?logo=tensorflow)](https://www.tensorflow.org/)
 [![Unity](https://img.shields.io/badge/Unity-3D-black?logo=unity)](https://unity.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Paper](Springer Nature)](https://doi.org/10.1007/s10489-024-06213-3
-
-)
 
 > **A road sign detection system for autonomous vehicles using a CNN ensemble fused via an Ordered Weighted Averaging (OWA) layer, evaluated (not in real time) in a Unity 3D traffic simulation across multiple weather and accident scenarios.
 
