@@ -20,18 +20,6 @@ Intelligent Transportation Systems (ITS) aim to enhance road safety and Internet
 
 ---
 
-## Key Results
-
-| Method | Accuracy |
-|---|---|
-| VGG16 (fine-tuned) | — |
-| ResNet50 (fine-tuned) | — |
-| EfficientNetB0 (fine-tuned) | — |
-| **OWA Ensemble (VGG16 + ResNet50 + EfficientNetB0)** | **98.81%** |
-| Extended Kalman Filter (EKF) execution time | 0.02 s |
-| Dempster-Shafer vs Fuzzy Integral accuracy gain | ~30% better |
-
----
 
 ## System Overview
 
@@ -42,30 +30,31 @@ Intelligent Transportation Systems (ITS) aim to enhance road safety and Internet
 └─────────────────────────┬────────────────────────────────────────┘
                           │  Full-Duplex Python ↔ Unity TCP Socket
           ┌───────────────▼───────────────┐
-          │     Camera Image Stream        │
+          │     Camera Image (saved)      │
           └───────────────┬───────────────┘
                           │
           ┌───────────────▼───────────────────────────────────┐
-          │              CNN Ensemble (Python)                 │
-          │                                                    │
-          │   ┌──────────┐ ┌──────────┐ ┌───────────────┐    │
-          │   │  VGG16   │ │ ResNet50 │ │ EfficientNetB0│    │
-          │   │(224×224) │ │(224×224) │ │  (224×224)    │    │
-          │   └────┬─────┘ └────┬─────┘ └──────┬────────┘    │
+          │              CNN Ensemble (Python)                │
+          │                                                   │
+          │   ┌──────────┐ ┌──────────┐ ┌───────────────┐     │
+          │   │  VGG16   │ │ ResNet50 │ │ EfficientNetB0│     │
+          │   │(224×224) │ │(224×224) │ │  (224×224)    │     │
+          │   └────┬─────┘ └────┬─────┘ └──────┬────────┘     │
           │        └────────────┼───────────────┘             │
           │                     │                             │
           │          ┌──────────▼──────────┐                  │
-          │          │   OWA Fusion Layer   │                  │
-          │          │  (O'Hagan Weights)   │                  │
+          │          │   OWA Fusion Layer   │                 │
+          │          │  (O'Hagan Weights)   │                 │
           │          └──────────┬──────────┘                  │
           └─────────────────────┼──────────────────────────── ┘
                                 │
           ┌─────────────────────▼──────────────────────────────┐
-          │            Data Fusion (Multi-Sensor)               │
-          │  ┌─────────────┐ ┌──────────────┐ ┌────────────┐  │
-          │  │EKF / UKF    │ │Dempster-     │ │  Fuzzy     │  │
-          │  │Kalman Filter│ │Shafer Theory │ │  Integral  │  │
-          │  └─────────────┘ └──────────────┘ └────────────┘  │
+          │               Data Fusion (Multi-Sensor)           |
+          |          (will be added later to the repo)         |     
+          │  ┌─────────────┐ ┌──────────────┐ ┌────────────┐   │
+          │  │EKF / UKF    │ │Dempster-     │ │  Fuzzy     │   │
+          │  │Kalman Filter│ │Shafer Theory │ │  Integral  │   │
+          │  └─────────────┘ └──────────────┘ └────────────┘   │
           └────────────────────────────────────────────────────┘
                                 │
                     ┌───────────▼───────────┐
@@ -87,8 +76,8 @@ The model is trained on the **`Combined_Dataset (Unity_Kaggle)`** folder, which 
 ```
 Combined_Dataset (Unity_Kaggle)/
 ├── Train/
-│   ├── Speed_20/
-│   ├── Speed_30/
+│   ├── 0 (Speed_20)/
+│   ├── 1 (Speed_30)/
 │   └── ... (8 classes)
 ├── Validation/
 │   └── ... (8 classes)
@@ -125,16 +114,6 @@ Two weight strategies are supported:
 - **Pessimistic** (orness = 0.7, α = 0.79): weights emphasise lower-confidence predictions
 
 The final merged model is saved as `OWA_Model_Pessimistic.h5`.
-
-### Step 3 — Data Fusion (Multi-Sensor)
-
-Predictions from the CNN and road sign label data are fused using:
-- **Extended Kalman Filter (EKF)** — faster (0.02 s), slightly less accurate
-- **Unscented Kalman Filter (UKF)** — more accurate, higher computational cost
-- **Dempster-Shafer Theory** — ~30% better accuracy than Fuzzy Integral
-- **Fuzzy Integral Operators** — alternative evidence combination method
-
----
 
 ## Unity Simulation
 
