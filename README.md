@@ -67,23 +67,7 @@ Intelligent Transportation Systems (ITS) aim to enhance road safety and Internet
 
 ## Dataset
 
-The model is trained on the **`Combined_Dataset (Unity_Kaggle)`** folder, which combines Unity-rendered road sign images with Kaggle road sign data. The dataset covers **8 speed limit classes**:
-
-- Speed limit: 20 km/h, 30 km/h, 50 km/h, 60 km/h, 70 km/h, 80 km/h, 100 km/h, 120 km/h
-
-### Folder structure expected by the code
-
-```
-Combined_Dataset (Unity_Kaggle)/
-├── Train/
-│   ├── 0 (Speed_20)/
-│   ├── 1 (Speed_30)/
-│   └── ... (8 classes)
-├── Validation/
-│   └── ... (8 classes)
-└── Test/
-    └── ... (8 classes)
-```
+The model is trained on the images collected from the Unity-based simulator scenes and the GTSRB dataset publicly available on Kaggle link: https://www.kaggle.com/datasets/harbhajansingh21/german-traffic-sign-dataset).
 
 ---
 
